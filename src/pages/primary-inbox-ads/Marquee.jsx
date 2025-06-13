@@ -22,7 +22,7 @@ const ReviewCard = ({ label }) => {
   );
 };
 
-export function MarqueeDemo() {
+export default function MarqueeDemo() {
   return (
     <div className="relative flex gap-1 w-full flex-col items-center justify-center overflow-hidden">
       <Marquee
@@ -48,3 +48,4 @@ export function MarqueeDemo() {
     </div>
   );
 }
+

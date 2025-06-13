@@ -37,7 +37,7 @@ const sidebarmenu = [
 const LeftSideBar = ({ componentName, setcomponentName }) => {
   const [subMenuOpen, setsubMenuOpen] = useState(() =>
     sidebarmenu.reduce((acc, item) => {
-      if (item.subMenu) acc[item.Name] = true;
+      if (item.subMenu) acc[item?.Name] = true;
       return acc;
     }, {})
   );
@@ -46,7 +46,7 @@ const LeftSideBar = ({ componentName, setcomponentName }) => {
     if (menu.subMenu) {
       setsubMenuOpen((prev) => ({
         ...prev,
-        [menu.Name]: !prev[menu.Name],
+        [menu?.Name]: !prev[menu?.Name],
       }));
     } else {
       // For submenu items, use subName and des
@@ -59,7 +59,7 @@ const LeftSideBar = ({ componentName, setcomponentName }) => {
       // For main menu items without subMenu, use Name and des
       else {
         setcomponentName({
-          Name: menu.Name,
+          Name: menu?.Name,
           des: menu.des
         });
       }
@@ -96,29 +96,29 @@ const LeftSideBar = ({ componentName, setcomponentName }) => {
             <div
               onClick={() => handleOnClick(v)}
               className={`rounded-full transition-all duration-300 text-sm font-medium leading-4  w-full  p-[14px] flex justify-between items-center ${
-                subMenuOpen[v.Name] && "bg-primary text-white"
+                subMenuOpen[v?.Name] && "bg-primary text-white"
               }
               
-              ${(componentName.Name === v.Name) && "bg-primary text-white"}
+              ${(componentName?.Name === v?.Name) && "bg-primary text-white"}
               
               `}
             >
-              {v.Name}
+              {v?.Name}
               <div
                 className={` transition-all duration-500 ${
-                  subMenuOpen[v.Name] ? "rotate-180" : "rotate-0"
+                  subMenuOpen[v?.Name] ? "rotate-180" : "rotate-0"
                 }`}
               >
                 {v.subMenu && (
                   <FaqsIcon
-                    color={subMenuOpen[v.Name] ? "white" : "black"}
+                    color={subMenuOpen[v?.Name] ? "white" : "black"}
                     width="16"
                     height="16"
                   />
                 )}
               </div>
             </div>
-            {v.subMenu && subMenuOpen[v.Name] && (
+            {v.subMenu && subMenuOpen[v?.Name] && (
               <div className="flex flex-col gap-1">
                 {v.subMenu.map((subv, subi) => (
                   <div
@@ -126,14 +126,14 @@ const LeftSideBar = ({ componentName, setcomponentName }) => {
                     key={subi}
                     className="flex items-center gap-1"
                   >
-                    <span className={`min-w-[6px] min-h-[6px] mx-[7px] bg-black rounded-full transition-all duration-300 ${(componentName.Name === subv.subName) && 'bg-primary' }`}>
+                    <span className={`min-w-[6px] min-h-[6px] mx-[7px] bg-black rounded-full transition-all duration-300 ${(componentName?.Name === subv.subName) && 'bg-primary' }`}>
                       {" "}
                     </span>
-                    <div className={`p-3 flex w-full justify-between transition-all duration-300 items-center rounded-full  ${(componentName.Name === subv.subName) && 'bg-primary text-white' } `}>
+                    <div className={`p-3 flex w-full justify-between transition-all duration-300 items-center rounded-full  ${(componentName?.Name === subv.subName) && 'bg-primary text-white' } `}>
                       <p className="text-sm font-medium leading-4">
                         {subv.subName}
                       </p>
-                      {(componentName.Name === subv.subName) && (
+                      {(componentName?.Name === subv.subName) && (
                         <div data-aos="fade-right">
                         <ArrowRight color="white" width="16" height="16" />
                       </div>
@@ -192,7 +192,7 @@ export default LeftSideBar;
 // //   const [subMenuOpen, setsubMenuOpen] = useState({});
 // const [subMenuOpen, setsubMenuOpen] = useState(() =>
 //   sidebarmenu.reduce((acc, item) => {
-//     if (item.subMenu) acc[item.Name] = true;
+//     if (item.subMenu) acc[item?.Name] = true;
 //     return acc;
 //   }, {})
 // );
@@ -200,10 +200,10 @@ export default LeftSideBar;
 //     if (menu.subMenu) {
 //       setsubMenuOpen((prev) => ({
 //         ...prev,
-//         [menu.Name]: !prev[menu.Name],
+//         [menu?.Name]: !prev[menu?.Name],
 //       }));
 //     } else {
-//       setcomponentName(menu.Name || menu.subName);
+//       setcomponentName(menu?.Name || menu.subName);
 
      
 //     }
@@ -231,29 +231,29 @@ export default LeftSideBar;
 //             <div
 //               onClick={() => handleOnClick(v)}
 //               className={`rounded-full transition-all duration-300 text-sm font-medium leading-4  w-full  p-[14px] flex justify-between items-center ${
-//                 subMenuOpen[v.Name] && "bg-primary text-white"
+//                 subMenuOpen[v?.Name] && "bg-primary text-white"
 //               }
               
-//               ${(componentName.Name === v.Name) && "bg-primary text-white"}
+//               ${(componentName?.Name === v?.Name) && "bg-primary text-white"}
               
 //               `}
 //             >
-//               {v.Name}
+//               {v?.Name}
 //               <div
 //                 className={` transition-all duration-500 ${
-//                   subMenuOpen[v.Name] ? "rotate-180" : "rotate-0"
+//                   subMenuOpen[v?.Name] ? "rotate-180" : "rotate-0"
 //                 }`}
 //               >
 //                 {v.subMenu && (
 //                   <FaqsIcon
-//                     color={subMenuOpen[v.Name] ? "white" : "black"}
+//                     color={subMenuOpen[v?.Name] ? "white" : "black"}
 //                     width="16"
 //                     height="16"
 //                   />
 //                 )}
 //               </div>
 //             </div>
-//             {v.subMenu && subMenuOpen[v.Name] && (
+//             {v.subMenu && subMenuOpen[v?.Name] && (
 //               <div 
 //               className="flex flex-col gap-1"
               
@@ -264,14 +264,14 @@ export default LeftSideBar;
 //                     key={subi}
 //                     className="flex items-center gap-1"
 //                   >
-//                     <span className={`min-w-[6px] min-h-[6px] mx-[7px] bg-black rounded-full transition-all duration-300 ${(componentName.Name === subv.subName) && 'bg-primary' }`}>
+//                     <span className={`min-w-[6px] min-h-[6px] mx-[7px] bg-black rounded-full transition-all duration-300 ${(componentName?.Name === subv.subName) && 'bg-primary' }`}>
 //                       {" "}
 //                     </span>
-//                     <div className={`p-3 flex w-full justify-between transition-all duration-300 items-center rounded-full  ${(componentName.Name === subv.subName) && 'bg-primary text-white' } `}>
+//                     <div className={`p-3 flex w-full justify-between transition-all duration-300 items-center rounded-full  ${(componentName?.Name === subv.subName) && 'bg-primary text-white' } `}>
 //                       <p className="text-sm font-medium leading-4">
 //                         {subv.subName}
 //                       </p>
-//                       {(componentName.Name === subv.subName) && (
+//                       {(componentName?.Name === subv.subName) && (
 //                         <div data-aos="fade-right">
 //                         <ArrowRight color="white" width="16" height="16" />
 //                       </div>
