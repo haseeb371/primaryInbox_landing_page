@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -23,6 +24,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable}  antialiased`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NQFTZ2QLXS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NQFTZ2QLXS');
+          `}
+        </Script>
         <AOS>
           <NavBar />
           <WebsiteWrapper>{children}</WebsiteWrapper>
