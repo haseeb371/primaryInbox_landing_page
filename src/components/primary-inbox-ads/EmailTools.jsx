@@ -1,7 +1,7 @@
 import { BastaIcon } from "@/assets/icons";
 import React from "react";
 import AdHeader from "./AdHeader";
-import FeatureShowdown from "../home/FeatureShowdown";
+import FeatureShowdown from "@/components/home/FeatureShowdown";
 import EmailToolChart from "./EmailToolChart";
 
 const EmailTools = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import AuthheroSection from './AuthheroSection'
+import AuthheroSection from '@/components/tools/authentication/AuthheroSection'
 
 const AuthenticationPage = () => {
   return (

@@ -6,7 +6,7 @@ import {
 } from "@/assets/icons";
 import PrimaryButton from "@/components/buttons/PrimaryButtom";
 import React from "react";
-import { MarqueeDemo } from "./Marquee";
+import MarqueeDemo from "./Marquee";
 import AdHeader from "./AdHeader";
 
 const Why = () => {

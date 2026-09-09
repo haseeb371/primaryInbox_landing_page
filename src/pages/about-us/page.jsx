@@ -1,6 +1,6 @@
 import SecondaryHeroSection from "@/components/SecondaryHeroSection";
 import React from "react";
-import CompanyValue from "./CompanyValue";
+import CompanyValue from "@/components/about-us/CompanyValue";
 
 const AboutUs = () => {
   return (

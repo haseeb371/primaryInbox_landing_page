@@ -2,7 +2,7 @@ import Faqs from "@/components/Faqs";
 import OutReach from "@/components/OutReach";
 import SecondaryHeroSection from "@/components/SecondaryHeroSection";
 import React from "react";
-import ContactSection from "./ContactSection";
+import ContactSection from "@/components/contact-us/ContactSection";
 
 const ContactUs = () => {
   return (

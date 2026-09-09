@@ -1,7 +1,7 @@
 import SecondaryHeroSection from "@/components/SecondaryHeroSection";
 import React from "react";
 
-import FeedbackSection from "./FeedbackSection";
+import FeedbackSection from "@/components/feedback/FeedbackSection";
 
 const Feedback = () => {
   return (

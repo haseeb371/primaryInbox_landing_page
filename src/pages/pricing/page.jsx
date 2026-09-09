@@ -2,7 +2,7 @@ import Faqs from '@/components/Faqs'
 import OutReach from '@/components/OutReach'
 import SecondaryHeroSection from '@/components/SecondaryHeroSection'
 import React from 'react'
-import Plan from './Plan'
+import Plan from '@/components/pricing/Plan'
 
 const Pricing = () => {
   return (

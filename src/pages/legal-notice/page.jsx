@@ -1,6 +1,6 @@
 import SecondaryHeroSection from '@/components/SecondaryHeroSection';
 import React from 'react'
-import LegalnoticeSection2 from './LegalnoticeSection2';
+import LegalnoticeSection2 from '@/components/legal-notice/LegalnoticeSection2';
 
 
 const LegalNotice = () => {

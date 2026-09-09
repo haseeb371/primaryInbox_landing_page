@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import Faqs from "@/components/Faqs";
 import OutReach from "@/components/OutReach";
-import NewPolicySection from "./NewPolicySection";
+import NewPolicySection from "@/components/privacy-policy/NewPolicySection";
 
 const PrivacyPolicy = () => {
   return (

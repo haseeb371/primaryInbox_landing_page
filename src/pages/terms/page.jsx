@@ -1,6 +1,6 @@
 import SecondaryHeroSection from '@/components/SecondaryHeroSection';
 import React from 'react'
-import TermsSection from './TermsSection';
+import TermsSection from '@/components/terms/TermsSection';
 
 const TermsCondition = () => {
     return (
